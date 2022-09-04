@@ -32,6 +32,7 @@ Generate NFT Image & Metadata Sets For Ethereum & Solana Networks. (Originally W
 		- Sets The Description Of The Collection
 		- Sets The Symbol To BAGZ
 		- Sets The URL For The Collection
+		
 				WIDTH=600
 				HEIGHT=600
 				SIZE=1000
