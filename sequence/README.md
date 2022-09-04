@@ -148,6 +148,7 @@ The weight has been changed to 9 & now *ADA.png* will appear far more often than
 - Currently, there is no way to generate a background color, and you must supply a set of background layers if you would like a background. (This feature is planned for the future)
 
 ## To Do
+- Refactor For More General Use
 - Finish Commenting Code
 - Finish Updating The Usage Instructions
 - Add Option To Generate Background / Background Color Without Requiring A Folder Of Images
