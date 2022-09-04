@@ -77,7 +77,8 @@ The weight has been changed to 9 & now *ADA.png* will appear far more often than
 	- ***random*** can be used in place of a filename to have the script choose at random
 
 > *Manually Generates An Image With The Layers Specified, Green.png Is Used For The Background, Bag-1 Is Used For The Next Layer, and The Coin Is Chosen At Random*
-			node build.js build green bag-1 random
+
+		node build.js build green bag-1 random
 
 ### fix
 - Allows You To Delete Generated Files For Any Reason, & Cleans Up The Collection Renaming The Images & JSON Files To Ensure All Images Are In Numerical Order, & The Correct JSON File Is Associated With It
