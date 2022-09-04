@@ -25,6 +25,7 @@ The codebase for the modified version of the minting dapp to generate a single p
 
 - [https://bagholderz-nft.eth](https://bagholderz-nft.eth)
 - [https://bagholderz.nft](https://bagholderz.nft)
+- [https://ipfs.bagholderz.co](https://ipfs.bagholderz.co)
 
 
 - ### sequence
