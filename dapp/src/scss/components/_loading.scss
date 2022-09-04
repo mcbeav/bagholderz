@@ -1,0 +1,62 @@
+body {
+
+    &> main {
+
+        &> section {
+
+            &> figure {
+
+                &:nth-of-type( 3 ) {
+
+                    &.loading {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr;
+                        justify-items: center;
+                        align-items: center;
+                        pointer-events: none;
+                        user-select: none;
+
+                        &> figcaption {
+                            grid-area: 1 / 1;
+                            font-family: "BrownBagLunch";
+                            color: rgba( 11, 11, 11, 0.7 );
+                            font-size: clamp( 2rem, 1vh, 6rem );
+                            text-align: center;
+                            pointer-events: none;
+                            user-select: none;
+
+                            &::after {
+                                content: unset;
+                                pointer-events: none;
+                                user-select: none;
+                            }
+                        }
+
+                        &> svg {
+                            grid-area: 1 / 1;
+                            width: clamp( 30px, 10vh, 200px );
+                            pointer-events: none;
+                            user-select: none;
+                            animation: loading-contract 2s linear infinite;
+
+                            &> circle {
+                                display: block;
+                                fill: transparent;
+                                stroke: rgba( 11, 11, 11, 0.6 );
+                                stroke-linecap: round;
+                                stroke-dasharray: 283;
+                                stroke-dashoffset: 280;
+                                stroke-width: 10px;
+                                transform-origin: center center;
+                                pointer-events: none;
+                                user-select: none;
+                                animation: loading-contract-circle 1.4s ease-in-out infinite both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

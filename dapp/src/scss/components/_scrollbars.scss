@@ -1,0 +1,25 @@
+::-webkit-scrollbar,
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+    display: none !important;
+    background: none !important;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+body {
+    scrollbar-color: transparent !important;
+    scrollbar-width: 0 !important;
+}

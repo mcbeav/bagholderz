@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "bagholderz": {
+      "js": [
+        "/build/bagholderz.js"
+      ]
+    }
+  }
+}

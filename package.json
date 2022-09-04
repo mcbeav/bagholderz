@@ -1,0 +1,26 @@
+{
+  "name": "bagholderz",
+  "version": "1.0.0",
+  "description": "Bagholderz NFT Collection On The Ethereum & Solana Blockchains Reflecting On Current Market Sentiment",
+  "main": "",
+  "scripts": {
+    "deploy": "cd smart-contract; yarn; npm install; yarn compile; cd ../dapp; yarn; npm install; npm run sass:production; npm run webpack:production; yarn deploy",
+    "dev:server": "cd dapp; yarn dev:server",
+    "sass:build": "cd dapp; yarn sass:build",
+    "sass:production": "cd dapp; yarn sass:production",
+    "typescript:build": "tsc",
+    "webpack:build": "cd dapp; yarn webpack:build",
+    "webpack:production": "cd dapp; yarn webpack:production"
+  },
+  "keywords": [
+    "NFT",
+    "Ethereum",
+    "Smart Contract",
+    "Solidity",
+    "bagholderz"
+  ],
+  "author": "mcbeav",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

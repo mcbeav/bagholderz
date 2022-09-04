@@ -1,0 +1,8 @@
+/node_modules
+**/node_modules
+/sequence/*.png
+/sequence/**/*.png
+package-lock.json
+.env
+*.DS_Store
+.DS_Store

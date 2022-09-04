@@ -1,0 +1,4 @@
+{
+  "solidity.packageDefaultDependenciesDirectory": "smart-contract/node_modules",
+  "solidity.compileUsingRemoteVersion": "0.8.9"
+}

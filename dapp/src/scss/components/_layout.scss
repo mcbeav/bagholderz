@@ -1,0 +1,656 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    // grid-template-rows: 1fr 50px;
+    grid-template-rows: calc( var( --height ) - 50px ) 50px;
+    width: 100%;
+    height: 100vh;
+    height: var( --height );
+    background: url( '../img/background/background.jpg' ) repeat;
+    background-size: cover;
+    overflow: hidden;
+    user-select: none;
+
+    &> main {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20vh calc( 30vh - 50px ) 40vh;
+        align-content: space-between;
+        max-height: 100%;
+        padding: 0 1rem;
+        overflow: hidden;
+        user-select: none;
+
+        &> header {
+            padding: 0 0 2rem 0;
+            text-align: center;
+            font-family: "BrownBagLunch";
+            pointer-events: none;
+            user-select: none;
+
+            &> hgroup {
+                display: flex;
+                flex-flow: column;
+                pointer-events: none;
+                user-select: none;
+
+                &> h1 {
+                    color: rgba( 11, 11, 11, 0.8 );
+                    font-size: clamp( 2rem, 22vw, 14rem );
+                    height: clamp( 2rem, 22vw, 14rem );
+                    margin: 0 0 0.5rem 0;
+                    line-height: 1;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                &> h2 {
+                    color: rgba( 11, 11, 11, 0.7 );
+                    font-size: clamp( 1rem, 7vw, 4rem );
+                    height: clamp( 1rem, 7vw, 4rem );
+                    margin: 0 0 0.75rem 0;
+                    line-height: 1;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                &> h3 {
+                    color: rgba( 0, 0, 0, 1 );
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: clamp( 0.5rem, 2vw, 1.6rem );
+                    height: clamp( 0.5rem, 2vw, 1.6rem );
+                    margin: 0 0 1.5rem 0;
+                    font-weight: 100;
+                    font-style: italic;
+                    line-height: 1;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                &> h4 {
+                    color: rgba( 0, 0, 0, 0.5 );
+                    font-size: clamp( 0.5rem, 2vw, 2rem );
+                    height: clamp( 0.5rem, 2vw, 2rem );
+                    font-weight: 100;
+                    line-height: 1;
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+        }
+
+        &> section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+            user-select: none;
+            visibility: hidden;
+
+            &> figure {
+                width: 100%;
+                max-width: 600px;
+                user-select: none;
+
+                button {
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    border: none;
+                    outline: none;
+                    padding: 0.5rem 0;
+                    background: none;
+                    border: 2px solid rgba( 11, 11, 11, 0.7 );
+                    border-bottom: 4px solid rgba( 11, 11, 11, 0.7 );
+                    cursor: pointer;
+                    user-select: none;
+
+                    &:active {
+                        border-bottom: 2px solid rgba( 11, 11, 11, 0.7 );
+                    }
+    
+                    &> span {
+                        text-align: center;
+                        font-family: "BrownBagLunch";
+                        color: rgba( 11, 11, 11, 0.8 );
+                        font-size: 3rem;
+                        line-height: 0.5;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+                }
+
+                &> figcaption {
+                    pointer-events: none;
+                    user-select: none;
+
+                    &::after {
+                        content: attr( data-value );
+                        pointer-events: none;
+                        user-select: none;
+                    }
+                }
+
+                &:nth-of-type( 1 ) {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 1rem;
+                    padding: 1rem;
+                    margin: 0 0 1rem 0;
+                    background: rgba( 255, 255, 255, 0 );
+                    border: 2px solid rgba( 255, 255, 255, 0 );
+                    color: rgba( 255, 255, 255, 0 );
+                    text-transform: capitalize;
+                    visibility: hidden;
+
+                    &> h3 {
+                        font-size: 1.2rem;
+                        margin: 0 0 0.5rem 0;
+                        pointer-events: none;
+                        user-select: none;
+                        
+                        &::after {
+                            content: "Message";
+                            pointer-events: none;
+                            user-select: none;
+                        }
+                    }
+
+                    &> figcaption {
+                        font-size: 1rem;
+                        font-weight: 500;
+                        margin: 0 0 0.5rem 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    &> button {
+                        margin: 0 0 0 auto;
+                        background: rgba( 255, 255, 255, 0 );
+                        border: none;
+                        border-bottom: 2px solid rgba( 255, 255, 255, 0 );
+                        color: rgba( 255, 255, 255, 0 );
+                        border-radius: 0.5rem;
+                        padding: 0.5rem 1rem;
+                        font-weight: 700;
+                        font-family: -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, sans-serif;
+                    }
+
+                    &.error {
+                        background: rgba( 254, 228, 230, 1 );
+                        color: rgba( 255, 0, 88, 1 );
+                        border: 2px solid rgba( 255, 0, 88, 1 );
+                        visibility: visible;
+
+                        &> h3 {
+
+                            &::after {
+                                content: "Error:";
+                            }
+                        }
+
+                        &> button {
+                            background: rgba( 255, 0, 88, 1 );
+                            color: rgba( 254, 228, 230, 1 );
+                            border-bottom: 2px solid rgba( 219, 36, 74, 1 );
+
+                            &:active {
+                                border-bottom: none;
+                                padding: calc( 0.5rem + 2px ) 1rem 0.5rem 1rem;
+                            }
+                        }
+                    }
+
+                    &.warning {
+                        background: rgba(255, 237, 222, 1);
+                        color: rgba(255, 181, 33, 1);
+                        border: 2px solid rgba(255, 181, 33, 1);
+                        visibility: visible;
+
+                        &> h3 {
+
+                            &::after {
+                                content: "Warning:";
+                            }
+                        }
+
+                        &> button {
+                            background: rgba(255, 181, 33, 1);
+                            color: rgba(255, 237, 222, 1);
+                            border-bottom: 2px solid rgba(223, 157, 28, 1);
+
+                            &:active {
+                                border-bottom: none;
+                                padding: calc(0.5rem + 2px) 1rem 0.5rem 1rem;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-of-type( 2 ) {
+                    font-size: clamp( 1rem, 2.2vh, 4rem );
+                    text-align: center;
+                    font-family: "BrownBagLunch";
+                    color: rgba( 11, 11, 11, 0.7 );
+                    margin: 0 0 1rem 0;
+
+                    &> h3 {
+                        margin: 0 0 1rem 0;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+                }
+
+                &:nth-of-type( 3 ) {
+                    display: flex;
+
+                    &> button {
+                        border-bottom-width: 4px;
+                        transition-property: border-bottom-width;
+                        transition-duration: 0.3s;
+                        transition-timing-function: linear;
+                        transition-delay: 0.3s;
+
+                        &:nth-of-type( 1 ) {
+                            width: 25%;
+                            border-right: none;
+                            border-top-left-radius: 1rem;
+                            border-bottom-left-radius: 1rem;
+                        }
+
+                        &:nth-of-type( 2 ) {
+                            width: 50%;
+
+                            &> span {
+
+                                &::after {
+                                    content: "mint " attr( data-value );
+                                }
+                            }
+                        }
+
+                        &:nth-of-type( 3 ) {
+                            width: 25%;
+                            border-left: none;
+                            border-top-right-radius: 1rem;
+                            border-bottom-right-radius: 1rem;
+                        }
+
+                        &:active {
+                            border-bottom-width: 2px;
+                            transition-property: border-bottom-width;
+                            transition-duration: 0s;
+                            transition-timing-function: linear;
+                            transition-delay: 0s;
+                            cursor: default;
+                        }
+                    }
+
+                    &.disabled {
+                        
+                        &> button {
+                            cursor: default;
+                            animation: buttons-minting-transition 0.7s linear 0.7s forwards, buttons-minting 2s linear 1.4s infinite alternate;
+
+                            &> span {
+                                animation: minting-span 2s linear 1.4s infinite alternate;
+                            }
+
+                            &:nth-of-type( 2 ) {
+
+                                &> span {
+
+                                    &::after {
+                                        content: "minting " attr( data-value );
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.sold-out {
+                        justify-content: center;
+                        pointer-events: all;
+
+                        &> figcaption {
+                            display: block;
+                            font-family: "BrownBagLunch";
+                            color: rgba( 11, 11, 11, 0.7 );
+                            font-size: clamp( 1rem, 2.5vh, 6rem );
+                            line-height: 1;
+                            text-align: center;
+                            pointer-events: all;
+
+                            &::after {
+                                content: unset;
+                            }
+
+                            &> a {
+                                display: block;
+                                margin: 1rem 0 0 0;
+                                color: rgba( 74, 24, 180, 1 );
+                                text-decoration: none;
+                                pointer-events: all;
+
+                                &:link,
+                                &:visited,
+                                &:hover,
+                                &:active {
+                                    color: rgba( 74, 24, 180, 1 );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.connected {
+                visibility: visible;
+            }
+        }
+
+        &> figure {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            user-select: none;
+
+            &> figcaption {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                color: rgba( 11, 11, 11, 0.7 );
+                font-family: "BrownBagLunch";
+                font-size: clamp( 1rem, 2.5vh, 6rem ); 
+                user-select: none;
+
+                &> ul {
+                    user-select: none;
+
+                    &:nth-of-type( 1 ) {
+                        justify-self: end;
+                        margin: 0 1rem 0 0;
+                        text-align: end;
+                    }
+
+                    &:nth-of-type( 2 ) {
+                        justify-self: start;
+                        margin: 0 0 0 1rem;
+
+                        &> li {
+
+                            &> span {
+
+                                &::before {
+                                    content: attr( data-value );
+                                    white-space: nowrap;
+                                }
+                            }
+
+                            &:nth-of-type( 2 ) {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                &> picture {
+                                    position: relative;
+                                    height: clamp( 1rem, 2.5vh, 6rem );
+                                    margin: 0 0 0 0.5rem;
+                                    border: none;
+                                    outline: none;
+                                    pointer-events: none;
+                                    user-select: none;
+                
+                                    &> svg {
+                                        height: 100%;
+                                        width: auto;
+                                        object-fit: contain;
+                                        border: none;
+                                        outline: none;
+                                        pointer-events: none;
+                                        user-select: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &> li {
+                        margin: 1rem 0;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+                }
+            }
+
+            &> picture {
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                height: clamp(100px, 30vh, 600px);
+                pointer-events: none;
+                user-select: none;
+
+                &> img {
+                    width: 100%;
+                    max-width: 600px;
+                    height: auto;
+                    object-fit: contain;
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+        }
+
+        &[data-status=connected] {
+
+            &> section {
+                display: flex;
+            }
+        }
+    }
+
+    &> footer {
+        height: 50px;
+        width: 100%;
+        background: url( '../img/background/footer.png' ) no-repeat;
+        background-size: 100% 100%;
+        user-select: none;
+
+        &> nav {
+            display: flex;
+            height: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+
+            &> ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                user-select: none;
+
+                &> li {
+                    margin: 0 1rem;
+                    border: none;
+                    line-height: 1;
+                    outline: none;
+                    white-space: nowrap;
+                    user-select: none;
+
+                    &:nth-of-type( 2 ) {
+                        margin: 0;
+                    }
+
+                    &> a {
+
+                        &:link,
+                        &:visited,
+                        &:hover,
+                        &:active {
+                            border: none;
+                            outline: none;
+                            text-decoration: none;
+                            color: rgba( 255, 255, 255, 0.9 );
+                            font-size: 3rem;
+                            font-family: "BrownBagLunch";
+                            user-select: none;
+    
+                            &> picture {
+                                position: relative;
+                                display: block;
+                                height: 34px;
+                                border: none;
+                                outline: none;
+                                user-select: none;
+    
+                                &> img {
+                                    height: 100%;
+                                    width: auto;
+                                    object-fit: contain;
+                                    border: none;
+                                    outline: none;
+                                    user-select: none;
+                                }
+
+                                &> svg {
+                                    height: 100%;
+                                    width: auto;
+                                    object-fit: contain;
+                                    border: none;
+                                    outline: none;
+                                    pointer-events: none;
+                                    user-select: none;
+                                }
+                            }
+    
+                            &> span {
+                                display: none;
+                                user-select: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &> button {
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                outline: none;
+                border: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 34px;
+                width: 50vw;
+                max-width: 300px;
+                border-radius: 1rem;
+                background: #F49D00;
+                border: 1px solid rgba( 11, 11, 11, 0.6 );
+                box-shadow:
+                                        0 0 1px rgba( 225, 225, 225, 0.8 ),
+                                        0 0 0px 1px rgba(116, 116, 116, 0),
+                                        inset 0 1px 1px 1px rgba(11,11,11,0);
+                color: #FFF;
+                font-size: 1.3rem;
+                font-weight: 400;
+                text-shadow: 0 -1px 0 rgba( 33, 33, 33, 0.3 );
+                margin: 0 1rem;
+                transition: background 0.1s linear 0.7s, box-shadow 0.1s linear 0.7s;
+                user-select: none;
+
+                &> span {
+                    display: none;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    pointer-events: none;
+                    user-select: none;
+                }
+
+                &> picture {
+                    position: relative;
+                    height: 18px;
+                    border: none;
+                    outline: none;
+                    pointer-events: none;
+                    user-select: none;
+
+                    &> img {
+                        height: 100%;
+                        width: auto;
+                        object-fit: contain;
+                        border: none;
+                        outline: none;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+
+                    &> svg {
+                        height: 100%;
+                        width: auto;
+                        object-fit: contain;
+                        border: none;
+                        outline: none;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+                }
+
+                &:active {
+                    background: #DF8F00;
+                    box-shadow:
+                                            0 0 1px rgba( 225, 225, 225, 0.8 ),
+                                            0 0 0px 1px rgba(116, 116, 116, 0.3),
+                                            inset 0 1px 1px 1px rgba(11,11,11,0.3);
+                    cursor: default;
+                    transition: background 0s linear 0s, box-shadow 0s linear 0s;
+                }
+        
+                &:disabled,
+                &[disabled=disabled] {
+                    outline: none;
+                    cursor: default;
+                    background: #4A18B4;
+                    box-shadow:
+                                            0 0 1px rgba( 225, 225, 225, 0.8 ),
+                                            0 0 0px 1px rgba(116, 116, 116, 0),
+                                            inset 0 1px 1px 1px rgba(11,11,11,0);
+
+                    &:active {
+                        background: #4A18B4;
+                        box-shadow:
+                                                0 0 1px rgba( 225, 225, 225, 0.8 ),
+                                                0 0 0px 1px rgba(116, 116, 116, 0),
+                                                inset 0 1px 1px 1px rgba(11,11,11,0);
+                    }
+                }
+
+                &.connected {
+                    background: #4A18B4;
+
+                    &:active {
+                        background: #2B1380;
+                        box-shadow:
+                                                0 0 1px rgba( 225, 225, 225, 0.8 ),
+                                                0 0 0px 1px rgba(116, 116, 116, 0.3),
+                                                inset 0 1px 1px 1px rgba(11,11,11,0.3);
+                        cursor: default;
+                        transition: background 0s linear 0s, box-shadow 0s linear 0s;
+                    }
+
+                    &> span {
+                        display: inline-block;
+                    }
+
+                    &> picture {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

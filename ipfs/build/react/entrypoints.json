@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "ipfs": {
+      "js": [
+        "/build/ipfs.js"
+      ]
+    }
+  }
+}

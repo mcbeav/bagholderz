@@ -1,0 +1,17 @@
+html, body {
+    box-sizing: border-box;
+    min-height: 100%;
+    width: 100%;
+    font: normal normal 700 1.6rem/1.168em -apple-system, BlinkMacSystemFont, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, sans-serif;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba( 0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+}
