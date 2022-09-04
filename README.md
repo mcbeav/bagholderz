@@ -3,7 +3,9 @@
 The codebase for the bagholderz NFT collection, the solidity smart contract, and the dApp for minting the collection, code for generating an IPFS compatible version of the bagholderz dApp, & the code for generating the NFT collection.
 
 [https://bagholderz.co](https://bagholderz.co)
+
 [https://bagholderz-nft.eth](https://bagholderz-nft.eth)
+
 [https://bagholderz.nft](https://bagholderz.nft)
 
 ![Sample Image](./dapp/public/img/sample/1.png)
@@ -12,7 +14,7 @@ The codebase for the bagholderz NFT collection, the solidity smart contract, and
 
 - ### dapp
 
-The codebase for the minting dapp hosted at ## [https://bagholderz.co](https://bagholderz.co)
+The codebase for the minting dapp hosted at [https://bagholderz.co](https://bagholderz.co)
 
 
 - ### ipfs
