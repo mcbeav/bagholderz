@@ -8,6 +8,8 @@ The codebase for the bagholderz NFT collection, the solidity smart contract, and
 
 [https://bagholderz.nft](https://bagholderz.nft)
 
+[https://ipfs.bagholderz.co](https://ipfs.bagholderz.co)
+
 ![Sample Image](./dapp/public/img/sample/1.png)
 
 ## Contents
